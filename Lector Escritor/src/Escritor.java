@@ -14,7 +14,11 @@ public class Escritor extends Thread{
 		
 		int sleepTime = rdmNum.nextInt(250-25+1)+25; // Entre 25 y 250ms
 		
-		sleep(sleepTime);
+		try {
+			sleep(sleepTime);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		
 		
 		System.out.println("Escritor: ISBN "+numP+" escrito.");
