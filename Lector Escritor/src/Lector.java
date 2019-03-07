@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class Lector extends Thread{
 	private int id;
@@ -8,8 +7,7 @@ public class Lector extends Thread{
 	}
 	
 	private void leer() {
-		Random rdmNum = new Random();
-		int sleepTime = rdmNum.nextInt(250 - 25 + 1) + 25;
+		int sleepTime = (int)(Math.random()*(250-25+1));
 		
 		try {
 			sleep(sleepTime);

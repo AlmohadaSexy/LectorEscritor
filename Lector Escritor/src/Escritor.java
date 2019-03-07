@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class Escritor extends Thread{
 	
@@ -8,11 +7,9 @@ public class Escritor extends Thread{
 	
 	
 	private void escribe() throws InterruptedException {
+		int numP =(int)(Math.random()*(999));
 		
-		Random rdmNum = new Random();
-		int numP = rdmNum.nextInt(999) + 1;
-		
-		int sleepTime = rdmNum.nextInt(250-25+1)+25; // Entre 25 y 250ms
+		int sleepTime = (int)(Math.random()*(250-25+1));
 		
 		try {
 			sleep(sleepTime);
